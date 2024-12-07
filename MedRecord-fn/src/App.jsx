@@ -1,11 +1,11 @@
-import { useState } from "react";
-
+import { router } from "./routes";
+import { RouterProvider } from "react-router-dom";
 
 function App() {
 
   return (
     <>
-      <h1 className="text-red-400">hello world</h1>
+      <RouterProvider router={router} />
     </>
   );
 }
