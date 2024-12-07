@@ -1,12 +1,11 @@
-import { useState } from "react";
-
+import { router } from "./routes";
+import { RouterProvider } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1 className="text-red-400">hello world</h1>
+      <RouterProvider router={router} />
     </>
   );
 }
