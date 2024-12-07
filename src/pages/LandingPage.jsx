@@ -2,8 +2,13 @@ import React from "react";
 import { Navbar } from "../components/Navbar";
 import dr from "../assets/dr.png";
 import backdr from "../assets/backdr.png";
-import medLogo from "../assets/medLogo.png";
-import { ArrowRight, CalendarDots, Pencil } from "@phosphor-icons/react";
+import {
+  ArrowRight,
+  CalendarDots,
+  Pencil,
+  ChatCircleDots,
+} from "@phosphor-icons/react";
+import ChatBot from "../components/chatBot";
 
 export const LandingPage = () => {
   return (
@@ -22,7 +27,7 @@ export const LandingPage = () => {
           </button>
         </div>
       </header>
-      <main className="flex flex-col items-center justify-center p-6">
+      <main className="relative flex flex-col items-center justify-center p-6">
         <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl p-6 bg-white shadow-md rounded-lg">
           <div className="md:w-1/2 p-6">
             <h1 className="flex flex-col text-5xl mb-4">
@@ -37,6 +42,7 @@ export const LandingPage = () => {
               Book an appointment <ArrowRight size={32} />
             </button>
           </div>
+          <ChatBot />
           <div className="md:w-1/2 p-6 relative">
             <div className="absolute z-20 bg-white rounded-xl p-3 w-fit flex border-2 border-neutral-200 shadow-md">
               <CalendarDots color="blue" size={28} />
@@ -44,6 +50,7 @@ export const LandingPage = () => {
                 book an appointment
               </span>
             </div>
+
             <div className="absolute mt-[40%] z-20 bg-slate-100 rounded-xl p-3 w-fit flex border border-neutral-200 shadow-md">
               <Pencil color="blue" size={26} />
               <span className="text-neutral-600 font-josefin font-bold">
